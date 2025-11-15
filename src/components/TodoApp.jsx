@@ -80,7 +80,7 @@ const TodoApp = () => {
               <dt className='uppercase text-[11px] tracking-[0.2em] text-white/60'>
                 Completion
               </dt>
-              <dd className='mt-2 text-3xl font-bold text-white'>
+              <dd className='mt-2 text-3xl font-bold text-slate-200'>
                 {completion}%
               </dd>
             </div>
@@ -92,7 +92,7 @@ const TodoApp = () => {
             <span>{today}</span>
             <span>{counts.total} total tasks</span>
           </div>
-          <h2 className='mt-4 text-2xl font-semibold text-zinc-50'>
+          <h2 className='mt-4 text-2xl font-semibold text-zinc-200'>
             Next focus
           </h2>
           <p className='mt-2 text-sm text-zinc-400'>
@@ -100,7 +100,7 @@ const TodoApp = () => {
           </p>
           <div className='mt-6 space-y-4 rounded-2xl border border-white/10 bg-zinc-900/40 p-4'>
             <p className='text-sm text-zinc-400'>Currently tackling:</p>
-            <p className='text-lg font-medium tracking-tight text-zinc-100'>
+            <p className='text-lg font-medium tracking-tight text-zinc-300'>
               {nextTodo ? nextTodo.text : 'Everything completed for now'}
             </p>
           </div>
@@ -127,7 +127,7 @@ const TodoApp = () => {
             <p className='text-xs uppercase tracking-[0.4em] text-zinc-500'>
               Task board
             </p>
-            <h2 className='text-3xl font-semibold text-white'>Inbox</h2>
+            <h2 className='text-3xl font-semibold text-slate-200'>Inbox</h2>
           </div>
           {counts.total > 0 && (
             <FilterTabs filter={filter} setFilter={setFilter} />
@@ -145,14 +145,14 @@ const TodoApp = () => {
               onChange={e => setText(e.target.value)}
               onKeyDown={e => handleEnter(e, addTodo)}
               placeholder='Capture the next to-do'
-              className='h-12 w-full rounded-2xl border border-white/10 bg-zinc-900/70 px-4 text-base text-white placeholder:text-zinc-500 focus:border-cyan-400/70 focus:outline-none focus:ring-2 focus:ring-cyan-400/20'
+              className='h-12 w-full rounded-2xl border border-white/10 bg-zinc-900/70 px-4 text-base text-slate-200 placeholder:text-zinc-500 focus:border-cyan-400/70 focus:outline-none focus:ring-2 focus:ring-cyan-400/20'
               aria-label='Add a new todo'
             />
           </label>
           <button
             onClick={addTodo}
             disabled={!text.trim() || textExists(text)}
-            className='h-12 rounded-2xl bg-gradient-to-r from-sky-500 via-indigo-500 to-fuchsia-500 px-6 text-sm font-semibold uppercase tracking-[0.25em] text-white shadow-[0_15px_35px_rgba(56,189,248,0.45)] transition focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-zinc-950 disabled:cursor-not-allowed disabled:opacity-40'
+            className='h-12 rounded-2xl bg-gradient-to-r from-sky-500 via-indigo-500 to-fuchsia-500 px-6 text-sm font-semibold uppercase tracking-[0.25em] text-slate-200 shadow-[0_15px_35px_rgba(56,189,248,0.45)] transition focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-zinc-950 disabled:cursor-not-allowed disabled:opacity-40'
             aria-label='Add todo'
           >
             <span className='inline-flex items-center gap-2'>
@@ -178,7 +178,6 @@ const TodoApp = () => {
               {counts.total === 0 ? (
                 <>
                   <div className='text-5xl mb-4'>Start fresh</div>
-                  <p className='text-lg text-white'>No todos yet</p>
                   <p className='text-sm text-zinc-500'>
                     Add your first task above.
                   </p>
@@ -186,7 +185,7 @@ const TodoApp = () => {
               ) : (
                 <>
                   <div className='text-5xl mb-4'>All clear</div>
-                  <p className='text-lg text-white'>No {filter} todos</p>
+                  <p className='text-lg text-slate-200'>No {filter} todos</p>
                 </>
               )}
             </div>

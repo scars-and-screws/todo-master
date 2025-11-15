@@ -38,7 +38,7 @@ export default function TodoItem ({
             value={editText}
             onChange={e => onEditTextChange(e.target.value)}
             onKeyDown={e => onKeyEnter(e, onSaveEdit)}
-            className='flex-1 rounded-2xl border border-white/15 bg-black/40 px-4 py-3 text-base text-white placeholder:text-zinc-500 focus:border-cyan-400/80 focus:outline-none focus:ring-2 focus:ring-cyan-400/30'
+            className='flex-1 rounded-2xl border border-white/15 bg-black/40 px-4 py-3 text-base text-slate-200 placeholder:text-zinc-500 focus:border-cyan-400/80 focus:outline-none focus:ring-2 focus:ring-cyan-400/30'
             autoFocus
           />
           <div className='flex gap-2'>
@@ -67,7 +67,7 @@ export default function TodoItem ({
             onClick={() => onToggle(todo.id)}
             className={`mt-1 flex h-7 w-7 items-center justify-center rounded-xl border transition ${
               todo.done
-                ? 'border-emerald-400/50 bg-emerald-500/80 text-white'
+                ? 'border-emerald-400/50 bg-emerald-500/80 text-slate-200'
                 : 'border-white/15 text-white/60 hover:border-sky-300/60'
             }`}
             aria-label={todo.done ? 'Mark as active' : 'Mark as completed'}
@@ -78,7 +78,7 @@ export default function TodoItem ({
           <div className='flex-1 space-y-2'>
             <p
               className={`text-base font-medium tracking-tight ${
-                todo.done ? 'text-zinc-500 line-through' : 'text-white'
+                todo.done ? 'text-zinc-500 line-through' : 'text-slate-200'
               }`}
             >
               {todo.text}
