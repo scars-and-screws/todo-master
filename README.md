@@ -8,7 +8,9 @@ Modern productivity surface built with React 19, Tailwind CSS v4, and Vite. Todo
 
 ## 🔗 Live Demo
 
-- **Netlify** → `https://your-netlify-live-url.netlify.app` _(replace with your deployed URL)_
+```pwsh
+https://todo-master-69.netlify.app
+```
 
 ---
 
